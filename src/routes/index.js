@@ -1,12 +1,13 @@
 const express = require("express");
-
 const routes = express.Router();
+
+const SessionController = require("../controllers/SessionController");
 
 routes.get("/", (req, res) => {
   return res.json({ msg: "is running" });
 });
 
-routes.get("/users", (req, res) => {
+routes.get("/session", (req, res) => {
   return res.json(req.body);
 });
 
